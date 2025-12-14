@@ -1,0 +1,491 @@
+{
+  "DEFAULT_MAPPING": [
+    {
+      "out_name": "NGAY",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "last_day_of_last_month",
+      "formula": ""
+    },
+    {
+      "out_name": "SOHD",
+      "mode": "select input",
+      "input_col": "Số Chứng từ",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "SERI",
+      "mode": "select input",
+      "input_col": "Ký hiệu",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "MẪU SỐ",
+      "mode": "select input",
+      "input_col": "Mẫu số",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "DIENGIAI",
+      "mode": "select input",
+      "input_col": "Diễn giải",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "BOPHAN",
+      "mode": "select input",
+      "input_col": "DeptCode",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "MA NHAP XUAT",
+      "mode": "select input",
+      "input_col": "TransCode",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TK NO",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "1310",
+      "formula": ""
+    },
+    {
+      "out_name": "MADV",
+      "mode": "select input",
+      "input_col": "Vật tư",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TK CO",
+      "mode": "select input",
+      "input_col": "CreditAccount2",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "DVT",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "-",
+      "formula": ""
+    },
+    {
+      "out_name": "SOLUONG",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "-",
+      "formula": ""
+    },
+    {
+      "out_name": "DONGIA",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "-",
+      "formula": ""
+    },
+    {
+      "out_name": "MALOAIVAT",
+      "mode": "select input",
+      "input_col": "TaxCode",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TK CO VAT",
+      "mode": "select input",
+      "input_col": "CreditAccount3",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "MAKH",
+      "mode": "select input",
+      "input_col": "Đối tượng",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THANHTIEN",
+      "mode": "select input",
+      "input_col": "Doanh thu",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THUEVAT",
+      "mode": "select input",
+      "input_col": "Tiền thuế",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TONGTIEN",
+      "mode": "calculate",
+      "input_col": "",
+      "fixed_value": "",
+      "formula": "Doanh thu + Tiền thuế"
+    },
+    {
+      "out_name": "LOẠI TIỀN",
+      "mode": "currency_rule",
+      "input_col": "",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THANHTIEN NT",
+      "mode": "select input",
+      "input_col": "Doanh thu NT",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THUEVAT NT",
+      "mode": "select input",
+      "input_col": "Tiền thuế NT",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TỶ GIÁ",
+      "mode": "select input",
+      "input_col": "ExchangeRate",
+      "fixed_value": "",
+      "formula": ""
+    }
+  ],
+  "test_1": [
+    {
+      "out_name": "NGAY",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "last_day_of_last_month",
+      "formula": ""
+    },
+    {
+      "out_name": "SOHD",
+      "mode": "select input",
+      "input_col": "Số Chứng từ",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "SERI",
+      "mode": "select input",
+      "input_col": "Ký hiệu",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "MẪU SỐ",
+      "mode": "select input",
+      "input_col": "Mẫu số",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "DIENGIAI",
+      "mode": "select input",
+      "input_col": "Diễn giải",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "BOPHAN",
+      "mode": "select input",
+      "input_col": "DeptCode",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "MA NHAP XUAT",
+      "mode": "select input",
+      "input_col": "TransCode",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TK NO",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "9999",
+      "formula": ""
+    },
+    {
+      "out_name": "MADV",
+      "mode": "select input",
+      "input_col": "Vật tư",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TK CO",
+      "mode": "select input",
+      "input_col": "CreditAccount2",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "DVT",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "-",
+      "formula": ""
+    },
+    {
+      "out_name": "SOLUONG",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "-",
+      "formula": ""
+    },
+    {
+      "out_name": "DONGIA",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "YYYY",
+      "formula": ""
+    },
+    {
+      "out_name": "MALOAIVAT",
+      "mode": "select input",
+      "input_col": "TaxCode",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TK CO VAT",
+      "mode": "select input",
+      "input_col": "CreditAccount3",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "MAKH",
+      "mode": "select input",
+      "input_col": "Đối tượng",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THANHTIEN",
+      "mode": "select input",
+      "input_col": "Doanh thu",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THUEVAT",
+      "mode": "select input",
+      "input_col": "Tiền thuế",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TONGTIEN",
+      "mode": "calculate",
+      "input_col": "",
+      "fixed_value": "",
+      "formula": "Doanh thu + Tiền thuế"
+    },
+    {
+      "out_name": "LOẠI TIỀN",
+      "mode": "currency_rule",
+      "input_col": "",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THANHTIEN NT",
+      "mode": "select input",
+      "input_col": "Doanh thu NT",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THUEVAT NT",
+      "mode": "select input",
+      "input_col": "Tiền thuế NT",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TỶ GIÁ",
+      "mode": "select input",
+      "input_col": "ExchangeRate",
+      "fixed_value": "",
+      "formula": ""
+    }
+  ],
+  "test_2": [
+    {
+      "out_name": "NGAY",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "last_day_of_last_month",
+      "formula": ""
+    },
+    {
+      "out_name": "SOHD",
+      "mode": "select input",
+      "input_col": "Số Chứng từ",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "SERI",
+      "mode": "select input",
+      "input_col": "Ký hiệu",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "MẪU SỐ",
+      "mode": "select input",
+      "input_col": "Mẫu số",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "DIENGIAI",
+      "mode": "select input",
+      "input_col": "Diễn giải",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "BOPHAN",
+      "mode": "select input",
+      "input_col": "DeptCode",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "MA NHAP XUAT",
+      "mode": "select input",
+      "input_col": "TransCode",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TK NO",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "9999",
+      "formula": ""
+    },
+    {
+      "out_name": "MADV",
+      "mode": "select input",
+      "input_col": "Vật tư",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TK CO",
+      "mode": "select input",
+      "input_col": "CreditAccount2",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "DVT",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "-",
+      "formula": ""
+    },
+    {
+      "out_name": "SOLUONG",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "-",
+      "formula": ""
+    },
+    {
+      "out_name": "DONGIA",
+      "mode": "fixed",
+      "input_col": "",
+      "fixed_value": "YYYY",
+      "formula": ""
+    },
+    {
+      "out_name": "MALOAIVAT",
+      "mode": "select input",
+      "input_col": "TaxCode",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TK CO VAT",
+      "mode": "select input",
+      "input_col": "CreditAccount3",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "MAKH",
+      "mode": "select input",
+      "input_col": "Đối tượng",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THANHTIEN",
+      "mode": "select input",
+      "input_col": "Doanh thu",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THUEVAT",
+      "mode": "select input",
+      "input_col": "Tiền thuế",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TONGTIEN",
+      "mode": "calculate",
+      "input_col": "",
+      "fixed_value": "",
+      "formula": "Doanh thu + Tiền thuế"
+    },
+    {
+      "out_name": "LOẠI TIỀN",
+      "mode": "currency_rule",
+      "input_col": "",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THANHTIEN NT",
+      "mode": "select input",
+      "input_col": "Doanh thu NT",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "THUEVAT NT",
+      "mode": "select input",
+      "input_col": "Tiền thuế NT",
+      "fixed_value": "",
+      "formula": ""
+    },
+    {
+      "out_name": "TỶ GIÁ",
+      "mode": "select input",
+      "input_col": "ExchangeRate",
+      "fixed_value": "",
+      "formula": ""
+    }
+  ]
+}
