@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: "3.11"
+        python-version: "3.12"
 
     - name: Install dependencies
       run: |
@@ -26,10 +26,10 @@ jobs:
 
     - name: Build EXE
       run: |
-        pyinstaller --onefile --noconsole --icon=excel_tool.ico run_app.py
+        pyinstaller --onefile --clean --noconsole --icon=excel_tool.ico --name Back-Doanh-Thu run_app.py
 
     - name: Upload EXE
       uses: actions/upload-artifact@v4
       with:
-        name: BackDoanhThuApp_EXE
-        path: dist/*.exe
+          name: Back-Doanh-Thu-Windows
+          path: dist/*.exe
