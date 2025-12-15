@@ -27,6 +27,8 @@ DESIRED_OUTPUT_HEADERS = [
     "THANHTIEN NT", "THUEVAT NT", "TỶ GIÁ"
 ]
 
+MAPPING_MODES = ["select input", "fixed", "calculate", "currency_rule"]
+
 DEFAULT_MAPPING = [
     {"out_name": "NGAY", "mode": "fixed", "fixed_value": "last_day_of_last_month"},
     {"out_name": "SOHD", "mode": "select input", "input_col": "Số Chứng từ"},
@@ -124,6 +126,10 @@ def read_workbook_build_headers(file_bytes, filename):
     else:
         raise ValueError("Unsupported file type")
 
+    # -------- Ensure at least 1 column --------
+    if df.shape[1] == 0 and df.shape[0] > 0:
+        df = pd.DataFrame([[None]])
+        
     # -------- Ensure at least 8 rows --------
     while df.shape[0] < 8:
         df = pd.concat(
@@ -234,8 +240,8 @@ def apply_single_filter(df, col, op, val):
 
 def apply_filters(df, filters):
     mask = pd.Series(True, index=df.index)
-    for f in filters:
-        mask &= apply_single_filter(df, f["col"], f["op"], f["val"])
+    for ftl in filters:
+        mask &= apply_single_filter(df, ftl["col"], ftl["op"], ftl["val"])
     return df[mask]
 
 
@@ -270,10 +276,12 @@ if "use_default_mapping" not in st.session_state:
 # =========================================================
 # UI
 # =========================================================
+
+# pragma: no cover
 st.title("Excel Filter & Output Mapping — Vietnam format")
+...
 
 left, right = st.columns([1, 2])
-count = 0
 
 # ------------------ IMPORT ------------------
 with left:
@@ -337,27 +345,27 @@ with right:
         filters = st.session_state["filters"]
         remove_id = None
 
-        for f in filters:
-            fid = f["id"]
+        for ftl in filters:
+            fid = ftl["id"]
             c1, c2, c3, c4 = st.columns([3, 2, 3, 1])
 
             col_val = c1.selectbox(
                 "Column",
                 st.session_state["cols"],
-                index=st.session_state["cols"].index(f["col"]),
+                index=st.session_state["cols"].index(ftl["col"]),
                 key=f"fc_{fid}"
             )
 
             op_val = c2.selectbox(
                 "Op",
                 OPERATORS,
-                index=OPERATORS.index(f["op"]),
+                index=OPERATORS.index(ftl["op"]),
                 key=f"fo_{fid}"
             )
 
             val_val = c3.text_input(
                 "Value",
-                f["val"],
+                ftl["val"],
                 key=f"fv_{fid}"
             )
 
@@ -365,7 +373,7 @@ with right:
                 remove_id = fid
 
             # update safely
-            f.update({"col": col_val, "op": op_val, "val": val_val})
+            ftl.update({"col": col_val, "op": op_val, "val": val_val})
 
         if remove_id:
             st.session_state["filters"] = [
@@ -453,8 +461,8 @@ if st.session_state["df"] is not None:
             v = st.session_state["mapping_version"]
             a.markdown(f"**{m['out_name']}**")
             m["mode"] = b.selectbox(
-                "Mode", ["select input", "fixed", "calculate", "currency_rule"],
-                index=["select input", "fixed", "calculate", "currency_rule"].index(m["mode"]),
+                "Mode", MAPPING_MODES,
+                index=MAPPING_MODES.index(m["mode"]),
                 key=f"mm{v}_{i}"
             )
             if m["mode"] == "select input":
